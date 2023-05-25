@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  /* #chessboard {
+    width : 300px;
+    height: 300px;
+    }
+    #field {
+        width: 600px;
+        height: 400px;
+        border: 2px solid black;
+        position: relative;
+      }
+      #ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: red;
+        position: absolute;
+      } */
+    </style>
+</head>
+<body>
+  <!-- <button id="minus-btn">-</button>
+<input id="number-input" type="number" min="0" max="9" value="0" readonly>
+<button id="plus-btn">+</button>
+
+<table id="chessboard"></table> -->
+<!-- <div id="field">		
+	<div id="ball"></div>
+</div> -->
+ <!-- <input type="text" id="numberInput"> -->
+ <!-- <table id="users-table">
+  <thead>
+    <tr>
+      <th>Имя</th>
+      <th>Пользователь</th>
+      <th>Админ</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>X</td>
+      <td></td>
+      <td><button onclick="deleteRow(this)">X</button></td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td></td>
+      <td>X</td>
+      <td><button onclick="deleteRow(this)">X</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</body>
+<script>
+   // Task #1 - conditional operator
+//  let x = parseInt(prompt("Ввидите число от 0 до 9"))
+//      switch(x){
+//      case 0:
+//          console.log("0");
+//          break;
+//      case 1:
+//          console.log("Один");
+//          break;
+//      case 2:
+//          console.log("Два");
+//  break;
+//      case 3:
+//          console.log("Три");
+//          break; 
+//      case 4:
+//          console.log("Четыре");
+//          break;
+//      case 5:
+//          console.log("Пять");
+//         break;
+//      case 6:
+//          console.log("Шесть");
+//          break;
+//      case 7:
+//          console.log("Семь");
+//          break;
+//      case 8:
+//          console.log("Восемь");
+//          break;
+//      case 9:
+//         console.log("Девять");
+//         break;
+//  }
+
+
+// function summa (a,b){
+//     let sum = 0;
+//     for (let i= a; i <= b; i++){
+//         if (i % 2 === 0){
+//             sum += i;
+//         }
+//     }
+//     return sum;
+// }
+// console.log(summa(1,30));
+// console.log(summa(8,20));
+
+
+// let a = parseInt(prompt('a = '))
+// let b = parseInt(prompt('b = '))
+// let c = parseInt(prompt('c = '))
+// console.log(Math.max(a,Math.max(b,c)));
+// console.log(Math.min(a,Math.min(b,c)));
+
+
+
+
+
+let value = prompt('Введите число', 0);
+
+if (value == 0) {
+  alert(0);
+} else if (value > 0) {
+  alert( 1 );
+} else if (value < 0) {
+  alert( -1 );
+} else {
+  alert( "Error" );
+} 
+
+
+
+// let age = parseInt(prompt("Введите возраст  "));
+
+// if (age >= 14 && age <= 90){
+// alert("Exzact!!!")
+// }
+// else{
+//     alert("error")
+// }
+
+
+
+// let userName = prompt("Введите логин", '');
+
+// if (userName === 'user1') {
+
+//   let pass = prompt('Введите пароль', '');
+
+//   if (pass === '1111') {
+//     alert( 'Привет' );
+//   } else if (pass === '' || pass === null) {
+//     alert( 'Ошибка валидации');
+//   } else {
+//     alert( 'Неверный пароль' );
+//   }
+
+// } else if (userName === '' || userName === null) {
+//   alert( 'Ошибка валидации' );
+// } else {
+//   alert( "Вы кто" );
+// }
+
+
+
+// let name = prompt("Ваше имя?", "");
+// alert(`Привет,${name}!`);
+// let isFamiliar = confirm("Вы знакомы с JavaScript?");
+//     if (isFamiliar){
+//         alert("Молодец!!!");
+//     }else{
+// alert("Можно начать изучение прямо сейчас");
+//     }
+
+
+//const numbers = [1,2,3,4,5];
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+// let i = 0;
+// while (i < numbers.length) {
+//   console.log(numbers[i]);
+//   i++;
+// }
+
+// let i = 0;
+// do {
+//   console.log(numbers[i]);
+//   i++;
+// } while (i < numbers.length);
+
+
+// for (let i in numbers) {
+//   console.log(numbers[i]);
+// }
+
+
+// for (let number of numbers) {
+//   console.log(number);
+// }
+//numbers.forEach(number => console.log(number));
+//numbers.map(number => console.log(number));
+
+//
+// function ThanAverage(array) {
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+//   let avg = sum / array.length;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] > avg) {
+//       console.log(array[i]);
+//     }
+//   }
+// }
+// ThanAverage(array)
+
+
+
+
+
+
+// function convert(fn, array) {
+//   let result = [];
+
+//   for (let i = 0; i < array.length; i++) {
+//     result.push(fn(array[i]));
+//   }
+
+//   return result;
+// }
+
+// function square(x) {
+//   return x * x;
+// }
+// console.log(convert(square, [1, 2, 3, 4])); 
+// console.log(convert(square, []));
+
+//  start =parseInt(prompt("")); 
+//  end =parseInt(prompt ("")); 
+// function extract(start, end) {
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//   return arr.slice(start, end + 1);
+// }
+// console.log (extract(start, end))
+
+
+// let user = {};
+// user={name : "John"};
+// user={surname : "Smith"};
+// user.name = "Pete"
+// delete user.name
+
+
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+
+// multiplyNumeric(menu);
+
+// console.log(menu);
+
+
+// let person = {
+// 	name: `Person`,
+// 	age: 123,
+// 	salary: 1542.33,
+// 	contacts: {
+// 		phone: `112`,
+// 		email: `email@domain.com`
+// },
+// address: `Moldova`
+// }
+// person.contacts.phone=`+37312345678`;
+// delete person.address
+
+
+// const weekDays = {
+// 	"Mo": "Понедельник",
+// 	"Tu": "Вторник",
+// 	"We": "Среда",
+// 	"Th": "Четверг",
+// 	"Fr": "Пятница",
+// 	"Sa": "Суббота",
+// 	"Su": "Воскресенье",
+// }
+// function translate(obj) {
+//   const translations = {
+//     "Mo": "Luni",
+//     "Tu": "Marti",
+//     "We": "Miercuri",
+//     "Th": "Joi",
+//     "Fr": "Vineri",
+//     "Sa": "Simbata",
+//     "Su": "Duminica",
+//   };
+
+//   const result = {};
+//   for (let k in obj) {
+//     if (k in translations) {
+//       result[k] = [translations[k]];
+//     } else {
+//       result[k] = obj[k];
+//     }
+//   }
+//   return result;
+// }
+// const translatedWeekDays = translate(weekDays);
+// console.log(translatedWeekDays);
+
+
+</script>
+</html>
